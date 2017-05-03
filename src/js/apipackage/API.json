@@ -1,0 +1,16 @@
+{
+  "mainApi": "http://localhost:3000/",
+  "userApi": {
+    "usualLogin": "login",
+    "phoneLogin": "login_phone",
+    "wechatLogin": "",
+    "qqLogin": "",
+    "logOut": "logout",
+    "regIn": "users",
+    "userCenter": "usercenter",
+    "centerChange": "usercenter/update",
+    "phoneNumberChange": "usercenter/update_phone_code",
+    "emailChange": "usercenter/update_email",
+    "passwordChange": "usercenter/update_password"
+  }
+}

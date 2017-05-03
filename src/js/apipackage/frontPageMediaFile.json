@@ -1,0 +1,44 @@
+{
+  "LogoUrl": "./src/resource/Logo/fakelogo.png",
+  "CarouselImg": [
+    {
+      "title": "1.jpg",
+      "description": "啦啦啦拉拉拉拉",
+      "tip": "音乐"
+    },
+    {
+      "title": "2.jpg",
+      "description": "啦啦啦拉拉拉拉",
+      "tip": "音乐"
+    },
+    {
+      "title": "3.jpg",
+      "description": "啦啦啦拉拉拉拉",
+      "tip": "音乐"
+    },
+    {
+      "title": "4.jpg",
+      "description": "啦啦啦拉拉拉拉",
+      "tip": "音乐"
+    },
+    {
+      "title": "5.jpg",
+      "description": "啦啦啦拉拉拉拉",
+      "tip": "音乐"
+    }
+  ],
+  "WeeklyNice": [
+    {
+      "title": "1.jpg",
+      "description": "lala"
+    },
+    {
+      "title": "2.jpg",
+      "description": "lala"
+    },
+    {
+      "title": "3.jpg",
+      "description": "lala"
+    }
+  ]
+}
