@@ -2,6 +2,13 @@ import { combineReducers } from 'redux'
 
 
 const defaultState = {
+
+  user:{
+    isLogin: false,
+    info:{
+    }
+  },
+
   count:0
 
 }
@@ -17,11 +24,15 @@ const defaultState = {
 
 
 // Reducer
-const counter = (state = { count: 0 }, action) => {
+const counter = (state = defaultState, action) => {
   const count = state.count
   switch (action.type) {
     case 'increase':
-      return { count: count + 1 }
+      state.count = state.count + 1;
+      console.log(state);
+      return {
+        ...state,
+        count: state.count}
     default:
       return state
   }

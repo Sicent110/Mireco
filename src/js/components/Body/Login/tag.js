@@ -31,32 +31,38 @@ const TabPane = Tabs.TabPane;
 
 //import ReactDOM from 'react-dom';
 
-const mapStateToProps = (state) => {
-  return {
-    // action: state.component.action,//要显示的组件以及  将要分发的action  有"login" "register"
-    // modalVisible: state.component.modalVisible,//是否弹出显示组件
-    hasLogined: state.component.hasLogined,//是否已经登录 true or false
-    userNickName: state.component.userNickName,//当前用户  缺省值为‘’
-    userid: state.component.userid,
-    // confirmDirty: state.component.confirmDirty //验证注册表单
-  }
-}
+// const mapStateToProps = (state) => {
+//   return {
+//     // action: state.component.action,//要显示的组件以及  将要分发的action  有"login" "register"
+//     // modalVisible: state.component.modalVisible,//是否弹出显示组件
+//     isLogin: state.component.isLogin,//是否已经登录 true or false
+//     userNickName: state.component.userNickName,//当前用户  缺省值为‘’
+//     userid: state.component.userid,
+//     // confirmDirty: state.component.confirmDirty //验证注册表单
+//   }
+// }
 
-class LoginandRegister extends React.Component{
+const LoginandRegister = ({user}) => {
   constructor(){
     super();
     this.state = {
       modalVisible: false,
       action: 'login',
-      // hasLogined: false,
-      // userNickName: '',
-      // userid: 0,
+      isLogin: false,
+      userNickName: '',
+      userid: 0,
       confirmDirty: false
     };
 
 
   };
-// const { hasLogined, userNickName, userid } = this.props;
+
+
+  const {isLogin, info} = user
+
+
+
+// const { isLogin, userNickName, userid } = this.props;
 //设置注册框是否弹出
   setModalVisible(value){
     this.setState({modalVisible: value});
@@ -144,12 +150,12 @@ class LoginandRegister extends React.Component{
 
   render(){
     const { getFieldDecorator } = this.props.form;
-    const userShow = this.state.hasLogined
+    const userShow = isLogin
     ?
     <div key="logout" className="register">
       <div className="selfBoard">
         <div className="Boardli">
-          <div className="idBox"><span className="idDisplay">田上太郎</span><Button type="ghost" className="logoutBtn">登出</Button></div>
+          <div className="idBox"><span className="idDisplay">{info.name}</span><Button type="ghost" className="logoutBtn">登出</Button></div>
         </div>
         <div className="Boardli">
           <div className="newBtn">创&nbsp;建&nbsp;新&nbsp;作</div>
@@ -282,6 +288,6 @@ class LoginandRegister extends React.Component{
   }
 }
 
-export default const LoginandRegister = Form.create({})(LoginandRegister);
+export default const Tag = Form.create({})(LoginandRegister);
 
 // export default connect(mapStateToProps)(Form.create({})(LoginandRegister));

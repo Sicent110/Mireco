@@ -10,6 +10,9 @@ import Home from './js/containers/Home';
 import Editor from './js/components/Body/Editor/index';
 import User from './js/containers/User';
 import Test from './js/containers/test';
+
+// import chonggou from './js/components/Body/Login/chonggou'
+
 import './theme/theme.less';
 import { Provider, connect } from 'react-redux';
 import { createStore } from 'redux'

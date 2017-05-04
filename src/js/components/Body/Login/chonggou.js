@@ -1,6 +1,7 @@
 import './LoginandRegister.less';
 import $ from 'jquery';
-import React from 'react';
+// import React from 'react';
+import React, { Component, PropTypes } from 'react'
 //import { Link } from 'react-router';
 //import 'whatwg-fetch';
 //var APIhost = require('./src/apipackage/API.json');
@@ -44,6 +45,9 @@ export default class Login extends Component {
 
   render() {
 
+    const { getFieldDecorator } = this.props.form;
+    const userShow = this.state.hasLogined
+
     // const { hasLogined, userNickName, userid } = this.props;
 
     return (
@@ -79,7 +83,7 @@ export default class Login extends Component {
           </FormItem>
         </Form>
       </TabPane>
-      // 
+      //
       // <div>
       //   <p>Type a username or repo full name and hit 'Go':</p>
       //   <input size="45"
